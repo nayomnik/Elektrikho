@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+
+         metadata-complete="false">
+    <display-name>Uliktrikho</display-name>
+    
+    <listener>
+        <listener-class>uz.uliktrik.gushkunakho.ContextGushkunak</listener-class>
+    </listener>
+  <context-param>
+    <param-name>url</param-name>
+    <param-value>jdbc:derby://localhost:1527/</param-value>
+  </context-param>
+  
+  <context-param>
+    <param-name>user_name</param-name>
+    <param-value>samadjon</param-value>
+  </context-param>
+  
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>samadjon</param-value>
+  </context-param>
+    
+  <context-param>
+  	<param-name>database</param-name>
+  	<param-value>ELEKTRIKHO</param-value>
+  </context-param>
+    <context-param>
+        <param-name>ContextGushkunak</param-name>
+        <param-value>1</param-value>
+    </context-param>
+    <context-param>
+        <param-name>kkkk</param-name>
+        <param-value>2</param-value>
+    </context-param>
+    <servlet>
+        <display-name>DarvozaiUliktrikhoServlet</display-name>
+        <servlet-name>DarvozaiUliktrikhoServlet</servlet-name>
+        <servlet-class>servletho.DarvozaiUliktrikhoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>ResponseServlet</display-name>
+        <servlet-name>ResponseServlet</servlet-name>
+        <servlet-class>servletho.ResponseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DarvozaiUliktrikhoServlet</servlet-name>
+        <url-pattern>/pursishi_uliktrikho</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ResponseServlet</servlet-name>
+        <url-pattern>/response</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>
